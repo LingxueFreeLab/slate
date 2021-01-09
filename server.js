@@ -326,9 +326,6 @@ app.prepare().then(async () => {
       return res.redirect("/404");
     }
 
-    console.log(slate.data.public);
-    console.log(slate.data.ownerId);
-    console.log(id);
     if (!slate.data.public && slate.data.ownerId !== id) {
       return res.redirect("/403");
     }
